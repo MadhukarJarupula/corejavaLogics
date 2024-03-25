@@ -1,0 +1,83 @@
+functions
+Example-1: 
+	function greet()
+	{	document.write("Good morning Sathya <br>");
+	}
+
+	function add(num1,num2)
+	{	let res; 
+		res = num1 + num2; 
+		document.write("Addition.."+res+"<br>")	
+	}
+
+	function billCalc(name,price,quantity)
+	{	let totalBill; 
+		totalBill = price * quantity; 	
+		return totalBill;
+	}
+
+	function dummy()
+	{	
+	}
+
+	//calling the function 
+	greet();
+	add(10,20);
+	let bill = billCalc("sugar",120,5);
+	document.writeln("Your Bill..."+bill+"<br>") 
+
+	let res = dummy();
+	document.write("dummy return value.."+res);
+
+
+example-2: 
+<html>
+<head>
+    <title>Fahrenheit to Celsius Converter</title>
+</head>
+<body>
+<form id="temperatureForm">
+    Enter Fahrenheit Temperature: <input type="text" id="fahrenheitInput"  required>
+	Celsius Temperature:<input type="text" id="celsiusOutput" readonly>
+    <button type="button" onclick="convertToFahrenheit()">Convert</button>
+</form>
+</body>
+</html>
+
+#Oninput() 
+<form id="temperatureForm">
+    Enter Fahrenheit Temperature: <input type="text" id="fahrenheitInput" oninput="convertToFahrenheit()" required> <br/>
+	Celsius Temperature:<input type="text" id="celsiusOutput" readonly>
+</form>
+
+#myscript.js 
+function convertToFahrenheit()
+{	 //Read the fahrenheitInput store iin variable 
+     const fahrenheitInput  = document.getElementById('fahrenheitInput').value;
+	
+	//convert the fahrenheitInput to celcius
+	const celsiusTemperature = (parseFloat(fahrenheitInput) - 32) * 5/9;
+	
+	//Set the output to celsiusOutput filed
+	document.getElementById('celsiusOutput').value = celsiusTemperature.toFixed(2);
+}
+
+#myscript.js 
+function convertToFahrenheit(){  
+    //Read the fahrenheitInput store iin variable 
+     const fahrenheitInput  = document.getElementById('fahrenheitInput').value;
+	
+	if(fahrenheitInput.trim() != ""){
+	//convert the fahrenheitInput to celcius 
+	const celsiusTemperature = (parseFloat(fahrenheitInput) - 32) * 5/9;
+	
+	//Set the output to celsiusOutput filed 
+	 document.getElementById('celsiusOutput').value = celsiusTemperature.toFixed(2);
+	}
+	else{
+		alert("Please enter the fahrenheit")
+	}
+}
+
+
+example: Dollar to INR

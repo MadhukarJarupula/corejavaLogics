@@ -1,0 +1,17 @@
+class Sample06 
+{
+	public static void main(String[] args) 
+	{
+		String str ="SreeRama is King and seetha is queen for a kingdom";
+		String words[] = str.split(" ");
+		int count =1;
+		for (String word:words)
+		{
+			  if (word==words)
+			  {
+				  count++;
+			  }
+		   System.out.print(word+" >- "+count+" ");
+		}
+	}
+}
